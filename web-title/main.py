@@ -48,13 +48,18 @@ def run(url,bool):
         try:
             title = str(re.findall(b'<title>(.*)</title>',res.content)[0],encoding='utf-8')
         except:
-            title = ''
+            try:
+                title = str(re.findall(b'<title>(.*)</title>',res.content)[0],encoding='GBK')
+            except:
+                title = ''
     elif (status>300) and (status<400):
         run(url,True)
         exit()
     else:
         title = '5** OR 4** ERROR'
     print('[+]'+url,title,status)
+    wf = open('domain.csv','a')
+    wf.write(url+','+title+','+str(status)+'\n')
 
 
 if __name__ == '__main__':
