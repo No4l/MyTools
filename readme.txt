@@ -16,3 +16,5 @@ CNVD:
     8.默认端口
     9.特殊文件特征
   main.py just for test
+2019/4/27
+  指纹识别，add error json
