@@ -20,3 +20,5 @@ CNVD:
   指纹识别，add error json
 2019/4/27
   Web Title
+2019/4/28
+  CVE-2019-2725
