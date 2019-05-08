@@ -22,3 +22,5 @@ CNVD:
   Web Title
 2019/4/28
   CVE-2019-2725
+2019/5/8
+  usefulMessage 记录渗透测试时发现的信息，方便查找
