@@ -16,16 +16,16 @@ def checkVersion():
         exit('[-]Python3 is need.')
 
 def exec(file):
-    urls = []
+    urls = set({})
     with open(file) as f:
         for i in f.readlines():
             # print(i)
             try:
                 re.search('http',i).group()
-                urls.append(i.strip())
+                urls.add(i.strip())
             except:
                 i = 'http://'+i.strip()
-                urls.append(i)
+                urls.add(i)
     threads = []
     for i in urls:
         threads.append(threading.Thread(target=run,args=(i,False,)))
@@ -33,7 +33,7 @@ def exec(file):
     for t in threads:
         t.setDaemon(True)
         t.start()
-        sleep(0.5)
+        sleep(1)
 
     t.join()
 
@@ -57,9 +57,39 @@ def run(url,bool):
         exit()
     else:
         title = '5** OR 4** ERROR'
+
+    backs = scanFile(url)
     print('[+]'+url,title,status)
     wf = open('domain.csv','a')
-    wf.write(url+','+title+','+str(status)+'\n')
+    wf.write(url+','+title+','+str(status)+','+','.join(backs)+'\n')
+
+# 隐私文件
+def scanFile(url):
+    flag = 0
+    backs = set({})
+    results = set({})
+    url = url.replace('http://','')
+    domain = url.split('.')
+    with open('back.txt') as f:
+        for i in f.readlines():
+            backs.add(i.strip())
+    for i in domain[:-1]:
+        for j in backs:
+            if '?' in j:
+                j = j.replace('?',i)
+            try:
+                res = requests.get('http://'+url+'/'+j,timeout=2)
+                if res.status_code == 200:
+                    flag += 1
+                    results.add('http://'+url+'/'+j)
+            except:
+                continue
+
+    if flag >= 40:
+        print('[-]May every page is 200!',url)
+        return []
+    else:
+        return results
 
 
 if __name__ == '__main__':
