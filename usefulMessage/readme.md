@@ -1,7 +1,7 @@
 ### usefulMessage
 - 记录
 - 查询
-
+- Webtitle
 
 ![](./mind.png)
 
@@ -14,7 +14,8 @@ Usage:
   asdomain test.baidu.com,ADD SUBDOMAIN INFO
   usdomain test.baidu.com,UPDATE SUBDOMAIN INFO
   use baidu.com,CHOOSE,ONE DOMAIN FOR LATER OPERATE
-  show domain/subdomain,SHOW ALL DOMAINS OR ALL SUBDOMAIN ABOUT THE SELECTED DOMAIN
+  webtitle,GET THE SUBDOMAIN WEBTITLE
+  show domains/subdomains,SHOW ALL DOMAINS OR ALL SUBDOMAIN ABOUT THE SELECTED DOMAIN
   help,SEE THE MESSAGE
   exit,EXIT
 ```

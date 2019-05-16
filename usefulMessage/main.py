@@ -2,9 +2,9 @@
 #!/usr/bin/env python3
 from cmd import Cmd
 from sqlhandle import *
-
+from webtitle import *
 class MYINFO(Cmd):
-    cDomain = ''
+    cDomain = '' # 当前选择的域名
     prompt = 'MYINFO>'
     intro  = '''Usage:
     sdomain baidu.com,GET INFO ABOUT DOMAIN
@@ -14,7 +14,8 @@ class MYINFO(Cmd):
     asdomain test.baidu.com,ADD SUBDOMAIN INFO
     usdomain test.baidu.com,UPDATE SUBDOMAIN INFO
     use baidu.com,CHOOSE,ONE DOMAIN FOR LATER OPERATE
-    show domain/subdomain,SHOW ALL DOMAINS OR ALL SUBDOMAIN ABOUT THE SELECTED DOMAIN
+    webtitle,GET THE SUBDOMAIN WEBTITLE 
+    show domains/subdomains,SHOW ALL DOMAINS OR ALL SUBDOMAIN ABOUT THE SELECTED DOMAIN
     help,SEE THE MESSAGE
     exit,EXIT'''
 
@@ -68,7 +69,7 @@ class MYINFO(Cmd):
     # 输出一个子域名的详细信息
     def do_ssdomain(self,arg):
         infos = aSearch('subdomains','subdomain',arg)
-        if infos is None:
+        if len(infos) == 0:
             print('[-]No Such Domain,Insert First!')
             return
         infos = infos[0]
@@ -123,17 +124,35 @@ class MYINFO(Cmd):
         print('[-]Domain Not Found,Insert First.')
 
     def do_show(self,arg):
+        flag = 0
         if arg == 'domains':
             domains = getAll('domains','domain')
         elif arg == 'subdomains':
             if self.cDomain != '':
-                domains = getAll('subdomains','subdomain','domain='+self.cDomain)
+                domains = getAll('subdomains','*','domain='+self.cDomain)
+                flag = 1
             else:
                 print('[-]NO DOMAIN SELECTED!')
                 return
+        else:
+            print("[*]show domains/subdomains")
+            return
         print('[+]Result:')
         for domain in domains:
-            print('\t'+domain[0])
+            if not flag:
+                print('\t'+str(domain[0]))
+            else:
+                print('\t'+str(domain[1]),str(domain[2]))
+
+    def do_webtitle(self,arg):
+        if self.cDomain == '':
+            print('[-]NO DOMAIN SELECTED!')
+            return
+        domains = []
+        for i in getAll('subdomains','subdomain','domain=autohome.com.cn'):
+            domains.append(i[0])
+        titles = webtitle(domains)
+        titles.exec()
 
 
     def do_help(self,arg):
