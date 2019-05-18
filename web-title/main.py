@@ -22,20 +22,24 @@ def exec(file):
             # print(i)
             try:
                 re.search('http',i).group()
-                urls.add(i.strip())
+                urls.add(i.strip()+'/')
             except:
-                i = 'http://'+i.strip()
+                i = 'http://'+i.strip()+'/'
                 urls.add(i)
+
+    targets = urls
+
+
     threads = []
-    for i in urls:
+    for i in targets:
         threads.append(threading.Thread(target=run,args=(i,False,)))
 
     for t in threads:
         t.setDaemon(True)
         t.start()
-        sleep(1)
 
-    t.join()
+    for t in threads:
+        t.join()
 
 def run(url,bool):
     title = ''
@@ -54,42 +58,17 @@ def run(url,bool):
                 title = ''
     elif (status>300) and (status<400):
         run(url,True)
-        exit()
-    else:
-        title = '5** OR 4** ERROR'
 
-    backs = scanFile(url)
+    else:
+        title = ''
+
+
     print('[+]'+url,title,status)
     wf = open('domain.csv','a')
-    wf.write(url+','+title+','+str(status)+','+','.join(backs)+'\n')
+    wf.write(url+','+title+','+str(status)+'\n')
 
-# 隐私文件
-def scanFile(url):
-    flag = 0
-    backs = set({})
-    results = set({})
-    url = url.replace('http://','')
-    domain = url.split('.')
-    with open('back.txt') as f:
-        for i in f.readlines():
-            backs.add(i.strip())
-    for i in domain[:-1]:
-        for j in backs:
-            if '?' in j:
-                j = j.replace('?',i)
-            try:
-                res = requests.get('http://'+url+'/'+j,timeout=2)
-                if res.status_code == 200:
-                    flag += 1
-                    results.add('http://'+url+'/'+j)
-            except:
-                continue
 
-    if flag >= 40:
-        print('[-]May every page is 200!',url)
-        return []
-    else:
-        return results
+
 
 
 if __name__ == '__main__':
