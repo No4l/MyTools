@@ -3,11 +3,13 @@
 import re
 import requests
 import threading
+from queue import Queue
 
 heads = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
 }
 
+q = Queue()
 files = [] # 200
 forbidden = [] # 403
 nothing = [] # 200 but no content
@@ -23,10 +25,11 @@ def exec():
 
     for i in urls:
         urls = urls | scanFile(i)
-
-    threads = []
     for i in urls:
-        threads.append(threading.Thread(target=run,args=(i,False,)))
+        q.put(i)
+    threads = []
+    for i in range(100):
+        threads.append(threading.Thread(target=run,args=(q,False,)))
 
     for t in threads:
         t.setDaemon(True)
@@ -57,36 +60,38 @@ def scanFile(url):
                 continue
     return results
 
-def run(url,bool):
-    flag = 0
-    text = ''
-    try:
-        res = requests.get(url,timeout=1,allow_redirects=bool,headers=heads)
-        status = res.status_code
-        text = res.text
-        length = len(text)
-    except:
-        status = 0
-
-    title = re.search('<title>.*?</title>',text)
-
-    try:
-        title.group()
-        flag = 1
-    except:
+def run(q,bool):
+    while not q.empty():
+        url = q.get()
         flag = 0
+        text = ''
+        try:
+            res = requests.get(url,timeout=1,allow_redirects=bool,headers=heads)
+            status = res.status_code
+            text = res.text
+            length = len(text)
+        except:
+            status = 0
 
-    if status == 403 or status == 200:
-        if status == 200:
-            if flag:
-                everything.append(url)
-            elif length == 0:
-                nothing.append(url)
+        title = re.search('<title>.*?</title>',text)
+
+        try:
+            title.group()
+            flag = 1
+        except:
+            flag = 0
+
+        if status == 403 or status == 200:
+            if status == 200:
+                if flag:
+                    everything.append(url)
+                elif length == 0:
+                    nothing.append(url)
+                else:
+                    files.append(url+' length: '+str(length))
             else:
-                files.append(url+' length: '+str(length))
-        else:
-            forbidden.append(url)
-        print('[%s]'%status,url,'length:',length)
+                forbidden.append(url)
+            print('[%s]'%status,url,'length:',length)
 
 
 if __name__ == '__main__':

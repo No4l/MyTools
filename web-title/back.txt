@@ -56,3 +56,4 @@ index.jsp
 index.asp
 index.php
 index.aspx
+wp-includes/rss-functions.php
