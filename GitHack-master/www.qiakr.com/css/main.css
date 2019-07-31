@@ -1,0 +1,138 @@
+html{
+    font-size: 62.5%;
+    color:#222;
+}
+body {
+    font-size: 1.2rem;
+    font-family:PingFangSC-Regular;
+    /*行间距*/
+    line-height: 1.5;
+    /*背景色*/
+    background: #fff;
+    overflow: auto;
+    min-width: 100rem;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 50em){}
+@media only screen and(min-width: 30.0625em) and (max-width: 50em){}
+@media only screen and (max-width: 30em){
+    /*html{position:fixed;}*/
+    body{
+        min-width: 100%;
+        overflow-x: hidden;
+    }
+    /*.login .register{display:none;}*/
+    /*header .main .login li:last-child{display:inline-block;}*/
+}
+/*被选中的颜色*/
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+/*无序列表*/
+ul{
+    margin: 0;
+    padding:0;
+}
+/*清除圆点*/
+li{
+    list-style: none;
+}
+/* ===============
+    工具样式
+================*/
+
+/*居中显示*/
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+/*空间消失*/
+.hide {display: none;}
+.show {display:block !important;}
+/*占位*/
+.invisible {visibility: hidden;}
+/*隐藏文本*/
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.btn-default{padding:1rem 2.5rem;background-color:transparent;border:1px solid #d5d5d5;font-size:1rem;color:#333333;cursor: pointer;outline:none;transition: all 0.3s;}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 17937 */
+    src: url('//at.alicdn.com/t/font_17937_gf0ar20bnf.eot');
+    src: url('//at.alicdn.com/t/font_17937_gf0ar20bnf.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_17937_gf0ar20bnf.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_17937_gf0ar20bnf.woff') format('woff'),
+    url('//at.alicdn.com/t/font_17937_gf0ar20bnf.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_17937_gf0ar20bnf.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:12px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+/* ＝＝＝＝＝＝＝
+    浏览器更新提示样式
+   ＝＝＝＝＝＝＝ */
+
+.browserupgrade {
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+/* ＝＝＝＝＝＝＝
+    自定义页面样式
+   ＝＝＝＝＝＝＝ */
+
+a {
+    /*超链接的默认颜色*/
+    color: #333;
+    /*默认没有下划线*/
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    /*text-decoration: underline;*/
+    text-decoration: none;
+}
+
+/* ========================  第二部分：网站内容 ===========================*/
+
+.container {
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+
