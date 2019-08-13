@@ -1,0 +1,10 @@
+google.com
+youtube.com
+facebook.com
+baidu.com
+wikipedia.org
+qq.com
+taobao.com
+tmall.com
+amazon.com
+yahoo.com
