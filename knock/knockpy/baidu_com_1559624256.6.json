@@ -1,0 +1,530 @@
+{
+    "target_response": {
+        "zonetransfer": {
+            "enabled": false,
+            "list": []
+        },
+        "target": "baidu.com",
+        "hostname": "baidu.com",
+        "virustotal": [],
+        "alias": [],
+        "wildcard": {
+            "detected": {},
+            "test_target": "xjyusofevlnkdrp.baidu.com",
+            "enabled": false,
+            "http_response": {}
+        },
+        "ipaddress": [
+            "123.125.114.144",
+            "220.181.38.148"
+        ],
+        "response_time": "0.0646648406982",
+        "http_response": {
+            "status": {
+                "reason": "Moved Temporarily",
+                "code": 302
+            },
+            "http_headers": {
+                "content-length": "161",
+                "expires": "Wed, 05 Jun 2019 02:47:14 GMT",
+                "server": "bfe/1.0.8.18",
+                "connection": "Keep-Alive",
+                "location": "https://www.baidu.com/",
+                "cache-control": "max-age=86400, privae",
+                "date": "Tue, 04 Jun 2019 02:47:14 GMT",
+                "content-type": "text/html"
+            }
+        }
+    },
+    "found": {
+        "subdomain": [
+            "jpaasmatrix.e.shifen.com",
+            "accounts.baidu.com",
+            "acid.baidu.com",
+            "access.baidu.com",
+            "baifubao-bfe.n.shifen.com",
+            "4.baidu.com",
+            "6.baidu.com",
+            "academico.baidu.com",
+            "15.baidu.com",
+            "2.baidu.com",
+            "12.baidu.com",
+            "a.baidu.com",
+            "02.baidu.com",
+            "13.baidu.com",
+            "www.a.shifen.com",
+            "aiib-01.n.shifen.com",
+            "acceso.baidu.com",
+            "16.baidu.com",
+            "8.baidu.com",
+            "8.n.shifen.com",
+            "ac.baidu.com",
+            "1.baidu.com",
+            "14.baidu.com",
+            "about.baidu.com",
+            "a2.baidu.com",
+            "ac.n.shifen.com",
+            "01.baidu.com",
+            "11.baidu.com",
+            "abc.baidu.com",
+            "18.baidu.com",
+            "asp.e.shifen.com",
+            "19.baidu.com",
+            "a01.baidu.com"
+        ],
+        "ipaddress": [
+            "220.181.38.148",
+            "218.28.144.38",
+            "111.206.37.81",
+            "202.108.23.221",
+            "112.80.255.31",
+            "61.135.186.115",
+            "61.135.185.20",
+            "10.94.49.39",
+            "112.80.248.234",
+            "61.135.169.125",
+            "123.125.114.144",
+            "61.135.186.230",
+            "111.206.223.244",
+            "202.108.23.222",
+            "61.135.169.121",
+            "61.135.186.244",
+            "112.80.248.124",
+            "123.125.114.38",
+            "153.37.235.93",
+            "112.80.255.131"
+        ],
+        "csv": [
+            "61.135.185.20,200,alias,01.baidu.com,nginx",
+            "61.135.185.20,200,host,aiib-01.n.shifen.com,nginx",
+            "153.37.235.93,200,host,aiib-01.n.shifen.com,nginx",
+            "218.28.144.38,,host,02.baidu.com,",
+            "111.206.223.244,302,alias,1.baidu.com,Apache",
+            "111.206.223.244,302,host,baifubao-bfe.n.shifen.com,Apache",
+            "112.80.255.31,302,host,baifubao-bfe.n.shifen.com,Apache",
+            "61.135.186.115,302,host,baifubao-bfe.n.shifen.com,Apache",
+            "202.108.23.222,,alias,11.baidu.com,",
+            "202.108.23.222,,host,jpaasmatrix.e.shifen.com,",
+            "61.135.186.230,,host,jpaasmatrix.e.shifen.com,",
+            "218.28.144.38,,host,12.baidu.com,",
+            "218.28.144.38,,host,13.baidu.com,",
+            "218.28.144.38,,host,14.baidu.com,",
+            "218.28.144.38,,host,15.baidu.com,",
+            "218.28.144.38,,host,16.baidu.com,",
+            "218.28.144.38,,host,18.baidu.com,",
+            "218.28.144.38,,host,19.baidu.com,",
+            "218.28.144.38,,host,2.baidu.com,",
+            "218.28.144.38,,host,4.baidu.com,",
+            "218.28.144.38,,host,6.baidu.com,",
+            "112.80.255.131,302,alias,8.baidu.com,",
+            "112.80.255.131,302,host,8.n.shifen.com,",
+            "61.135.186.244,302,host,8.n.shifen.com,",
+            "111.206.37.81,302,host,8.n.shifen.com,",
+            "112.80.248.124,200,alias,a.baidu.com,ECOM Apache 1.0.13.0",
+            "112.80.248.124,200,host,asp.e.shifen.com,ECOM Apache 1.0.13.0",
+            "123.125.114.38,200,host,asp.e.shifen.com,ECOM Apache 1.0.13.0",
+            "218.28.144.38,,host,a01.baidu.com,",
+            "218.28.144.38,,host,a2.baidu.com,",
+            "61.135.169.125,302,alias,abc.baidu.com,bfe",
+            "61.135.169.125,302,host,www.a.shifen.com,bfe",
+            "61.135.169.121,302,host,www.a.shifen.com,bfe",
+            "218.28.144.38,,host,about.baidu.com,",
+            "112.80.248.234,302,alias,ac.baidu.com,Apache",
+            "112.80.248.234,302,host,ac.n.shifen.com,Apache",
+            "202.108.23.221,302,host,ac.n.shifen.com,Apache",
+            "218.28.144.38,,host,academico.baidu.com,",
+            "218.28.144.38,,host,acceso.baidu.com,",
+            "10.94.49.39,,host,access.baidu.com,",
+            "218.28.144.38,,host,accounts.baidu.com,",
+            "218.28.144.38,,host,acid.baidu.com,"
+        ]
+    },
+    "subdomain_response": [
+        {
+            "target": "01.baidu.com",
+            "hostname": "aiib-01.n.shifen.com",
+            "alias": [
+                "01.baidu.com"
+            ],
+            "ipaddress": [
+                "61.135.185.20",
+                "153.37.235.93"
+            ],
+            "response_time": "0.21058011055",
+            "http_response": {
+                "status": {
+                    "reason": "Found",
+                    "code": 302
+                },
+                "http_headers": {
+                    "content-length": "154",
+                    "server": "nginx",
+                    "connection": "keep-alive",
+                    "location": "https://01.baidu.com/",
+                    "date": "Tue, 04 Jun 2019 02:47:15 GMT",
+                    "content-type": "text/html"
+                }
+            }
+        },
+        {
+            "target": "02.baidu.com",
+            "hostname": "02.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.0817360878",
+            "http_response": {}
+        },
+        {
+            "target": "1.baidu.com",
+            "hostname": "baifubao-bfe.n.shifen.com",
+            "alias": [
+                "1.baidu.com"
+            ],
+            "ipaddress": [
+                "111.206.223.244",
+                "112.80.255.31",
+                "61.135.186.115"
+            ],
+            "response_time": "0.188467979431",
+            "http_response": {
+                "status": {
+                    "reason": "Found",
+                    "code": 302
+                },
+                "http_headers": {
+                    "expires": "Fri, 30 Oct 1998 14:19:41 GMT",
+                    "tracecode": "38533764670853704714060410, 38533764673170637578060410, 38533764673170637578060410",
+                    "strict-transport-security": "max-age=31536000",
+                    "set-cookie": "BAIDUID=A6F5AAEEF846B38C884B48A4EFA25F09:FG=1; expires=Wed, 03-Jun-20 02:47:33 GMT; max-age=31536000; path=/; domain=.baidu.com; version=1, BAIDUID=B3F403717880E6255F6DCD4FA73BD5A6:FG=1; expires=Wed, 03-Jun-20 02:47:33 GMT; max-age=31536000; path=/; domain=.baidu.com; version=1, AB_EXPERIMENT=%7B%22group_smallflow%22%3A%22%22%2C%22NEW_IDCARD_AUTH%22%3A%22%22%2C%22rccRouteByChannel%22%3A%22%22%2C%22group_smallflow_uri%22%3A%7B%22exp_content%22%3A%22%7B%5C%22%5E%5C%5C%5C%2Fbd_mapp_domaincer_16202228.txt%5C%2F%3F%5C%22%3A%5C%22%5C%5C%5C%2Fcontent%5C%5C%5C%2Fresource%5C%5C%5C%2Fbd_mapp_domaincer_16202228.txt%5C%22%7D%22%2C%22exp_code%22%3A%22shoubai_app_conffile%22%7D%2C%22payphpOdpSyncMendTrans%22%3A%22%22%7D; path=/; httponly; max-age=60, BAIDUID=A1A9E1FBD28054AA817396BDE5C13C25:FG=1; expires=Wed, 03-Jun-20 02:47:33 GMT; max-age=31536000; path=/; domain=.baifubao.com; version=1",
+                    "server": "Apache",
+                    "access-control-allow-credentials": "false",
+                    "connection": "keep-alive",
+                    "x-bfb-rt": "0.009",
+                    "location": "https://www.baifubao.com/",
+                    "cache-control": "no-cache",
+                    "date": "Tue, 04 Jun 2019 02:47:33 GMT",
+                    "p3p": "CP=\" OTI DSP COR IVA OUR IND COM \", CP=\" OTI DSP COR IVA OUR IND COM \", CP=\" OTI DSP COR IVA OUR IND COM \"",
+                    "access-control-allow-methods": "POST, GET, OPTIONS",
+                    "content-type": "text/html",
+                    "access-control-allow-headers": "Content-Type,x-baidu-ie"
+                }
+            }
+        },
+        {
+            "target": "11.baidu.com",
+            "hostname": "jpaasmatrix.e.shifen.com",
+            "alias": [
+                "11.baidu.com"
+            ],
+            "ipaddress": [
+                "202.108.23.222",
+                "61.135.186.230"
+            ],
+            "response_time": "0.155037164688",
+            "http_response": {}
+        },
+        {
+            "target": "12.baidu.com",
+            "hostname": "12.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "11.8958830833",
+            "http_response": {}
+        },
+        {
+            "target": "13.baidu.com",
+            "hostname": "13.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "11.9091310501",
+            "http_response": {}
+        },
+        {
+            "target": "14.baidu.com",
+            "hostname": "14.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "11.9987819195",
+            "http_response": {}
+        },
+        {
+            "target": "15.baidu.com",
+            "hostname": "15.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.0072519779",
+            "http_response": {}
+        },
+        {
+            "target": "16.baidu.com",
+            "hostname": "16.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.0138759613",
+            "http_response": {}
+        },
+        {
+            "target": "18.baidu.com",
+            "hostname": "18.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.0722510815",
+            "http_response": {}
+        },
+        {
+            "target": "19.baidu.com",
+            "hostname": "19.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "11.9900090694",
+            "http_response": {}
+        },
+        {
+            "target": "2.baidu.com",
+            "hostname": "2.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.0125029087",
+            "http_response": {}
+        },
+        {
+            "target": "4.baidu.com",
+            "hostname": "4.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.1242959499",
+            "http_response": {}
+        },
+        {
+            "target": "6.baidu.com",
+            "hostname": "6.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.0597510338",
+            "http_response": {}
+        },
+        {
+            "target": "8.baidu.com",
+            "hostname": "8.n.shifen.com",
+            "alias": [
+                "8.baidu.com"
+            ],
+            "ipaddress": [
+                "112.80.255.131",
+                "61.135.186.244",
+                "111.206.37.81"
+            ],
+            "response_time": "0.187237024307",
+            "http_response": {
+                "status": {
+                    "reason": "Found",
+                    "code": 302
+                },
+                "http_headers": {
+                    "date": "Tue, 04 Jun 2019 02:50:33 GMT",
+                    "content-type": "text/plain; charset=utf-8",
+                    "location": "https://8.n.shifen.com/"
+                }
+            }
+        },
+        {
+            "target": "a.baidu.com",
+            "hostname": "asp.e.shifen.com",
+            "alias": [
+                "a.baidu.com"
+            ],
+            "ipaddress": [
+                "112.80.248.124",
+                "123.125.114.38"
+            ],
+            "response_time": "0.23561501503",
+            "http_response": {
+                "status": {
+                    "reason": "OK",
+                    "code": 200
+                },
+                "http_headers": {
+                    "content-length": "3",
+                    "accept-ranges": "bytes",
+                    "server": "ECOM Apache 1.0.13.0",
+                    "last-modified": "Thu, 22 Oct 2015 07:08:04 GMT",
+                    "etag": "\"27ea030-3-56288b54\"",
+                    "date": "Tue, 04 Jun 2019 02:50:45 GMT",
+                    "content-type": "text/html"
+                }
+            }
+        },
+        {
+            "target": "a01.baidu.com",
+            "hostname": "a01.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.032490015",
+            "http_response": {}
+        },
+        {
+            "target": "a2.baidu.com",
+            "hostname": "a2.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "17.9689898491",
+            "http_response": {}
+        },
+        {
+            "target": "abc.baidu.com",
+            "hostname": "www.a.shifen.com",
+            "alias": [
+                "abc.baidu.com"
+            ],
+            "ipaddress": [
+                "61.135.169.125",
+                "61.135.169.121"
+            ],
+            "response_time": "0.174978017807",
+            "http_response": {
+                "status": {
+                    "reason": "Found",
+                    "code": 302
+                },
+                "http_headers": {
+                    "date": "Tue, 04 Jun 2019 02:51:39 GMT",
+                    "content-type": "text/plain; charset=utf-8",
+                    "location": "https://www.baidu.com/error.html",
+                    "server": "bfe"
+                }
+            }
+        },
+        {
+            "target": "about.baidu.com",
+            "hostname": "about.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "11.8295061588",
+            "http_response": {}
+        },
+        {
+            "target": "ac.baidu.com",
+            "hostname": "ac.n.shifen.com",
+            "alias": [
+                "ac.baidu.com"
+            ],
+            "ipaddress": [
+                "112.80.248.234",
+                "202.108.23.221"
+            ],
+            "response_time": "0.220207929611",
+            "http_response": {
+                "status": {
+                    "reason": "Found",
+                    "code": 302
+                },
+                "http_headers": {
+                    "tracecode": "31114249580337166858060410",
+                    "server": "Apache",
+                    "location": "http://static.tieba.baidu.com/tb/error.html?tc=31114249580337166858060410",
+                    "set-cookie": "BAIDUID=00420707F63ED65CEC09E7FF295C679D:FG=1; expires=Wed, 03-Jun-20 02:51:51 GMT; max-age=31536000; path=/; domain=.baidu.com; version=1",
+                    "date": "Tue, 04 Jun 2019 02:51:51 GMT",
+                    "p3p": "CP=\" OTI DSP COR IVA OUR IND COM \"",
+                    "content-type": "text/html"
+                }
+            }
+        },
+        {
+            "target": "academico.baidu.com",
+            "hostname": "academico.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "11.8791081905",
+            "http_response": {}
+        },
+        {
+            "target": "acceso.baidu.com",
+            "hostname": "acceso.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "292.911579132",
+            "http_response": {}
+        },
+        {
+            "target": "access.baidu.com",
+            "hostname": "access.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "10.94.49.39"
+            ],
+            "response_time": "5.06131100655",
+            "http_response": {}
+        },
+        {
+            "target": "accounts.baidu.com",
+            "hostname": "accounts.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "12.0407781601",
+            "http_response": {}
+        },
+        {
+            "target": "acid.baidu.com",
+            "hostname": "acid.baidu.com",
+            "alias": [],
+            "ipaddress": [
+                "218.28.144.38"
+            ],
+            "response_time": "7209.74826813",
+            "http_response": {}
+        }
+    ],
+    "info": {
+        "wordlist": {
+            "item_count": 1921,
+            "filename": "/Users/Noel/Desktop/\u6e17\u900f\u6d4b\u8bd5/\u811a\u672c\u5de5\u5177/knock/knockpy/wordlist/wordlist.txt"
+        },
+        "time_start": "2019-06-04 10:47:02.854503",
+        "knockpy": {
+            "url": "https://github.com/guelfoweb/knock",
+            "query": [
+                "knockpy.py",
+                "baidu.com",
+                "--json"
+            ],
+            "version": "4.1.1"
+        },
+        "time_end": "2019-06-04 10:47:15.002382",
+        "sub_count": 33,
+        "ip_count": 20
+    }
+}
